@@ -1,0 +1,9 @@
+
+ Ride Receipt 
+Distance : 3.0 km
+Vehicle  : SUV
+Rate/km  : ₹25
+Hour     : 22
+Base Fare: ₹75.00
+Surge    : No
+Total    : ₹75.00
