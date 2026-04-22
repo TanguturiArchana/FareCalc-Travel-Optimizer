@@ -34,16 +34,16 @@ def save_receipt_to_file(ride):
             file.write("\n Ride Receipt \n")
             file.write(f"Distance : {ride['distance']} km\n")
             file.write(f"Vehicle  : {ride['vehicle']}\n")
-            file.write(f"Rate/km  : ₹{ride['rate']}\n")
+            file.write(f"Rate/km  : {ride['rate']}\n")
             file.write(f"Hour     : {ride['hour']}\n")
-            file.write(f"Base Fare: ₹{ride['base_fare']:.2f}\n")
+            file.write(f"Base Fare: {ride['base_fare']:.2f}\n")
 
             if ride['surge'] > 1:
                 file.write(f"Surge    : Yes ({ride['surge']}x)\n")
             else:
                 file.write("Surge    : No\n")
 
-            file.write(f"Total    : ₹{ride['total']:.2f}\n")
+            file.write(f"Total    : {ride['total']:.2f}\n")
 
     except Exception as e:
         print("Error saving receipt:", e)
@@ -62,14 +62,14 @@ def main():
         print("\n Ride Estimate Receipt ")
         print(f"Distance Travelled : {result['distance']} km")
         print(f"Vehicle Type       : {result['vehicle']}")
-        print(f"Rate per km        : ₹{result['rate']}")
+        print(f"Rate per km        : {result['rate']}")
         print(f"Travel Hour        : {result['hour']}")
-        print(f"Base Fare          : ₹{result['base_fare']:.2f}")
+        print(f"Base Fare          : {result['base_fare']:.2f}")
         if result['surge'] > 1:
             print(f"Surge Applied      : Yes ({result['surge']}x)")
         else:
             print("Surge Applied      : No")
-        print(f"Total Fare         : ₹{result['total']:.2f}")
+        print(f"Total Fare         : {result['total']:.2f}")
         save_receipt_to_file(result)
         print("\n--- Ride History ---")
         for i, ride in enumerate(ride_history, start=1):
